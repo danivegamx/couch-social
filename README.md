@@ -61,7 +61,7 @@ Used to strongly type the data, for example **User** and **Post**.
 - USed some centralized files such as the color variables and mixins but used modularity on components to modify specific styling on pages/components
 
 ### Deployed version
-- You can clone the repo and run it using the regular nextjs commands `npm|yarn run dev` or you can see the live demo: https://couch-social-hag7a1n1x-danivegamxs-projects.vercel.app
+- You can clone the repo and run it using the regular nextjs commands `npm|yarn run dev` or you can see the live demo: [https://couch-social-hag7a1n1x-danivegamxs-projects.vercel.app](https://couch-social.vercel.app/)
 
 ### Oportunity areas
 - With more time I wish I could clean the dependencies and folders for possible comments or unnecessary logs
