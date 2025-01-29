@@ -1,0 +1,29 @@
+@import '../../styles/colors'
+@import '../../styles/mixins'
+
+.profile
+  &-cover
+    height: 30vh
+    +for-size(tablet-landscape-up)
+      height: 20vh
+    background-size: cover!important
+  &-bio
+    span
+      color: $blue
+      font-size: 1.2rem
+  &-stats
+    &-item
+      background-color: white
+      box-shadow:0 6px 25px 0 rgba($blue, .15)
+      padding: 1rem
+      max-height: 56px
+      @media (prefers-color-scheme: dark)
+        background-color: $dark-blue
+        box-shadow: none
+      &.dark
+        background-color: $dark-blue
+        color: $green
+        box-shadow: none
+        cursor: pointer
+      span
+        color: $blue

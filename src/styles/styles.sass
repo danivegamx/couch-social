@@ -1,0 +1,126 @@
+@import 'colors'
+
+*
+  transition: .2s ease-in all
+
+header
+  display: flex
+  justify-content: space-between
+  span
+    font-size: 1.5rem
+    font-weight: 700
+    display: inline-flex
+    padding: .5rem
+    cursor: pointer
+    position: relative
+    &:hover
+      background-color: rgba(0,0,0,.1)
+      @media (prefers-color-scheme: dark)
+        background: rgba(255,255,255,.1)
+    &.active
+      &::after
+        border-radius: 50%
+        position: absolute
+        content: ''
+        display: block
+        width: 4px
+        height: 4px
+        background: $red
+        top: 96%
+        left: 50%
+        margin-left: -2px
+
+input, textarea, select
+  border-radius: .5rem
+  font-size: 1rem
+  padding: .7rem
+  box-shadow:0 6px 25px 0 rgba($blue, .15)
+  &::placeholder
+    color: $blue
+
+button
+  border-radius: .5rem
+  font-size: 1rem
+  padding: .7rem
+
+nav
+  ul
+    margin: 1rem 0
+    li
+      padding: .5rem 0
+      a
+        display: flex
+        gap: 1rem
+        padding: 1rem
+        &.current
+          color: $blue
+        &:hover
+          background-color: rgba(0,0,0,.1)
+          @media (prefers-color-scheme: dark)
+            background: rgba(255,255,255,.1)
+        span
+          display: inline-flex
+          background: $red
+          color: white
+          font-size: .5rem
+          padding: .2rem .5rem
+        svg
+          font-size: 1.3rem
+
+.color-blue
+  color: $blue
+
+.cta
+  &--primary
+    background-color: $blue
+    color: white
+    &:hover
+      background-color: darken($blue, 10%)
+  &--secondary
+    border: 2px solid $blue
+    background-color: transparent
+    color: $blue
+    &:hover
+      background-color: darken(transparent, 10%)
+
+.logo-name
+  color: $blue
+  font-weight: 700
+
+.notification
+  margin-top: -.5rem
+
+.mobile-nav
+  padding: .5rem .5rem .75rem
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  ul
+    display: flex
+    background: $blue
+    justify-content: space-around
+    padding: .5rem 1rem
+    width: 100%
+    li
+      display: inline-flex
+      a
+        font-size: 1.3rem
+        padding: .8rem
+        &.dark
+          background: $dark-blue
+          border-radius: 50%
+          color: $green
+        &.current
+          position: relative
+          &::after
+            border-radius: 50%
+            position: absolute
+            content: ''
+            display: block
+            width: 8px
+            height: 8px
+            background: $dark-blue
+            top: 105%
+            left: 50%
+            margin-left: -4px

@@ -1,0 +1,81 @@
+@import '../../styles/colors'
+
+.comment
+  background-color: white
+  box-shadow:0 6px 25px 0 rgba($blue, .15)
+  display: flex
+  gap: 1rem
+  svg
+    fill: $blue
+  button
+    &:hover
+      background-color: rgba(0,0,0,.1)
+      @media (prefers-color-scheme: dark)
+        background: rgba(255,255,255,.1)
+  @media (prefers-color-scheme: dark)
+    background-color: $dark-blue
+    box-shadow: none
+  &-user
+    font-size: .9rem
+    font-weight: 600
+  &-moment
+    color: gray
+    font-size: .7rem
+    span
+      color: $blue
+  &-input-wrapper
+    background: $blue
+    button
+      font-size: 1.25rem
+      display: inline-flex
+      svg
+        fill: $dark-blue
+  &-create
+    background: transparent
+    color: $dark-blue
+    width: 90%
+    outline: none
+    &::placeholder
+      color: $dark-blue
+
+.post
+  background-color: white
+  box-shadow:0 6px 25px 0 rgba($blue, .15)
+  @media (prefers-color-scheme: dark)
+    background-color: $dark-blue
+    box-shadow: none
+  &-user
+    font-weight: 600
+  &-moment
+    color: gray
+    font-size: .75rem
+  &-content-parragraph
+    padding: 0 0 1rem 0
+  &-content-wrapper
+    padding-bottom: 1rem
+
+.post-likes,
+.post-comments,
+.post-shared
+  display: flex
+  gap: .5rem
+  font-size: .8rem
+  padding: .5rem
+  &:hover
+    background: rgba(0,0,0,.1)
+    @media (prefers-color-scheme: dark)
+      background: rgba(255,255,255,.1)
+    cursor: pointer
+  svg
+    fill: $blue
+    font-size: 1rem
+
+.slick-next,
+.slick-prev
+  &::before
+    color: $dark-blue
+    @media (prefers-color-scheme: dark)
+      color: white
+
+.slick-slide
+  padding: 0 .5rem
